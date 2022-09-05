@@ -16,7 +16,7 @@ import { PetsModule } from './pets/pets.module';
     TypeOrmModule.forRoot({
       type: 'sqlite',
       database: ':memory:',
-      entities: ['dist/**/*.entity{.ts,.js'],
+      entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
     PetsModule,
