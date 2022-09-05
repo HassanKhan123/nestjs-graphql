@@ -16,4 +16,8 @@ export class PetsService {
     const newPet = this.petsRepository.create(createPetData);
     return this.petsRepository.save(newPet);
   }
+
+  async findOne(id: number): Promise<Pet> {
+    return this.petsRepository.findOneOrFail({ where: { id } });
+  }
 }
